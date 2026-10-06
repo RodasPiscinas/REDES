@@ -67,7 +67,7 @@ int llOpenTx(LinkLayer llParameters)
 
     // Check UA frame
     if (ua[0] == 0x7E &&
-        ua[1] == 0x01 &&
+        ua[1] == 0x03 &&
         ua[2] == 0x07 &&
         ua[3] == (ua[1] ^ ua[2]) &&
         ua[4] == 0x7E)
@@ -122,7 +122,7 @@ int llOpenRx(LinkLayer llParameters)
     unsigned char ua[5];
 
     ua[0] = 0x7E;
-    ua[1] = 0x01;
+    ua[1] = 0x03;
     ua[2] = 0x07;
     ua[3] = ua[1] ^ ua[2];
     ua[4] = 0x7E;
